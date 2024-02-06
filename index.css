@@ -1,5 +1,58 @@
 .theme-blue {
-  color: rgb(41,180,207) !important;
+  color: #00274C !important;
+}
+
+.theme-blue-bg {
+  background-color: #00274C !important;
+}
+
+body {
+  font-family: 'myFirstFont' !important;
+  font-weight: 400 !important;
+}
+
+@font-face {
+    font-family: "myFirstFont";
+    src: url("./assets/Montserrat-VariableFont_wght.ttf");
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-weight: 400 !important;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+.navbar {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.row {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.section-two {
+  animation-delay: 500ms;
+  opacity: 0;
+}
+
+.section-three {
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.navbar {
+  background-color: #FFCB05 !important;
 }
 
 .auto-ml-0-mr {
@@ -13,13 +66,13 @@
 }
 
 .clinic-bg {
-  opacity: 0.4;
+  opacity: 0;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: auto;
-  background-image: url('./clinic_bg.jpeg');
+  background-image: url('assets/team.JPG');
   right: 0;
   bottom: 0;
   background-repeat: no-repeat;
@@ -36,9 +89,13 @@
 .section-one {
   position: relative;
   padding: 40px;
-  color: white;
+  /* color: white; */
   align-items: center;
   text-shadow: rgb(0 0 0 / 70%) 0px 1px 3px;
+}
+
+.home-page {
+  color: white;
 }
 
 .bg-wrap {
@@ -65,38 +122,184 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: rgb(41,180,207);
+  background-color: #00274C;
   padding-top: 20px;
   padding-bottom: 20px;
+  color: white;
 }
 
 .section-two .address-card a {
-  color: black;
+  color: white;
   margin-bottom: 1rem;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+}
+
+body > .container-fluid {
+  min-height: 79vh;
 }
 
 .footer {
-  background-color: rgb(41,180,207);
+  background-color: #00274C;
   text-align: left;
   padding: 1.5rem 20px;
+  color: white;
+  /* position: absolute;
+  bottom: 0;
+  width: 100vw;
+  margin: 0; */
 }
 
 .footer a {
-  color: black;
-  margin-bottom: 1rem;
+  color: white;
   margin-right: 20px
 }
 
+.footer a svg{
+  margin-right: 5px;
+  color: white;
+}
+
 .about-desc {
-  color: black;
+  /* color: white; */
   text-shadow: none;
   margin-top: 30px;
+  text-align: left;
+
 }
 
-.about-desc a{
+.about-desc a {
   color: black;
 }
 
-.clinic {
+.about-page .section-one {
+  /* background-color: rgb(80,80,80); */
+}
+
+/* .clinic {
   max-width: 75% !important;
+} */
+
+.about-page hr {
+  border: none;
+  border-bottom: 2px solid #00274C;
+  width: 297px !important;
+  margin: 35px 0;
+  clear: both;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-member div:first-child {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.team-member {
+  margin: 15px 0;
+}
+
+.contact-page .section-one, .services-page .section-one {
+  background-color: rgb(249, 249, 249);
+  text-shadow: none;
+  color: black;
+}
+
+.contact-page .section-one h2, .contact-page .section-two h2 {
+  color: black !important;
+  margin-bottom: 25px;
+}
+
+.contact-page .form-group {
+  margin-top: 8px;
+}
+
+.contact-page label {
+  margin-bottom: 5px;
+}
+
+.contact-page button {
+  margin-top: 35px;
+  border-color: #00274C;
+  width: 200px;
+  margin-left: 15px;
+}
+
+.contact-page button:hover, .contact-page button:focus-visible, .contact-page button:active {
+  border-color: #00274C !important;
+  box-shadow: none;
+}
+
+.contact-page .section-two, .services-page .section-three {
+  position: relative;
+  padding: 40px;
+  align-items: center;
+}
+
+.services-page .section-one h2 {
+  margin-bottom: 20px;
+}
+
+.services-page .section-two {
+  position: relative;
+  padding: 40px;
+  color: white;
+}
+
+.services-page .section-two h4 {
+  margin-bottom: 20px;
+}
+
+.contact-page hr {
+  border: none;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.5);
+  clear: both;
+  position: relative;
+}
+
+.dropdown-menu {
+  width: 182px;
+  padding: 0;
+}
+
+.dropdown-item {
+  padding: 9px 0 9px 10px;
+}
+
+.dropdown-item:active {
+  background-color: #00274C;
+}
+
+.dropdown-divider {
+  margin: 0;
+}
+
+.services-page .section-three h4 {
+  margin-top: 20px;
+}
+
+.services-page a {
+  color: white;
+}
+
+.services-page p a {
+  color: black;
+}
+
+.filter-green{
+  filter: invert(75%) sepia(38%) saturate(546%) hue-rotate(2deg) brightness(106%) contrast(86%);
+}
+
+ul {
+  margin-left: 30px;
+}
+
+.sk_branding {
+  opacity: 0 ;
 }
