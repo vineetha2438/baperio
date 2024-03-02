@@ -1,3 +1,8 @@
+"use strict";
+
+
+console.log()
+
 $(document).ready(function(){
     console.log('page loaded')
 
@@ -85,7 +90,7 @@ $(document).ready(function(){
     console.log($(document)[0].location.href.split('/').slice(-1)[0].split('.')[0])
     const currentPage = $(document)[0].location.href.split('/').slice(-1)[0].split('.')[0]
 
-    if (currentPage == 'index') {
+    if (currentPage == 'index' || currentPage=='') {
         $("#home").addClass("active");    
     } else {
         $("#"+currentPage).addClass("active");
@@ -127,5 +132,10 @@ $(document).ready(function(){
             }, 250)
         }
     })
+
+    $.get("http://localhost:8080/status").done(function(data,textStatus){
+        console.log('hereee');
+        console.log(data)
+    });
 
 })
